@@ -5,6 +5,7 @@ Tests included:
 
 
 Maintaining and Adding:
+
 I created my tests using TestCafe Studio (https://www.devexpress.com/products/testcafestudio/) as was recommended on the TestCafe github page with the 30 day trial.  The record feature works well for grabbing the element from the dom file but has much to be desired in terms of creating efficient tests.  Tests can easily be run by selecting the play button beside either the individual test to test a single function, or beside the fixture to run all tests that are apart of that fixture.
 
 To add new functions to test, first identify which fixture to create them under.  Since I was writing smoke tests I created a smoketest fixture to house my tests.  If a fixture does not exist then you can make one in a new file with:
