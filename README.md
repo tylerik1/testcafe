@@ -10,14 +10,13 @@ I created my tests using TestCafe Studio (https://www.devexpress.com/products/te
 
 To add new functions to test, first identify which fixture to create them under.  Since I was writing smoke tests I created a smoketest fixture to house my tests.  If a fixture does not exist then you can make one in a new file with:
 
-
+```
 fixture `smoke_test` // name of fixture
-
     .page `http://newtours.demoaut.com/index.php`;  //web page to be opened with each test
-
+```
 
 When adding new functions, take a look at the common_functions file for a list of functions that will assist in taking out some of the repetative code in your tests.  If you feel a function would be benefitial for creating cleaner code feel free to add it to the common_functions file.  When you are ready to add a new test to a fixture, simply copy the template below and fill in the functionality that the test requires:
-
+```
 test('book_flight', async t => {  
 
     await register_account(user, password)  
@@ -26,5 +25,5 @@ test('book_flight', async t => {
     await t.expect(Selector('b').withText('Your itinerary has been booked!').find('font').nth(1).innerText).eql("Your itinerary has been booked!");
 
 });
-
+```
 each test should include a verification step as the last step to ensure the end state of the test is correct.
