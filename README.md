@@ -12,6 +12,7 @@ To add new functions to test, first identify which fixture to create them under.
 
 
 fixture `smoke_test` // name of fixture
+
     .page `http://newtours.demoaut.com/index.php`;  //web page to be opened with each test
 
 
